@@ -5,6 +5,7 @@ console.log(galleryItems);
 
 const galleryContainer = document.querySelector(".gallery");
 const galleryMarkup = createGalleryItemMarkup(galleryItems);
+let instance;
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
 
@@ -36,17 +37,19 @@ function galleryImageOpen(e) {
 	}
 
 	const selectedImage = e.target.dataset.source;
-	const instance = basicLightbox.create(`
+	instance = basicLightbox.create(`
     <img src="${selectedImage}" width="800" height="600">
 `);
 
 	instance.show();
 
-	window.addEventListener("keydown", e => {
-		if (e.code !== "Escape") {
-			return;
-		}
+	window.addEventListener("keydown", galleryImageClose);
+}
 
-		instance.close();
-	});
+function galleryImageClose(e) {
+	if (e.code !== "Escape") {
+		return;
+	}
+
+	instance.close();
 }
