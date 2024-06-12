@@ -1,3 +1,3 @@
-# goit-js-hw-06
+# goit-js-hw-07
 
-Sixth JS homework
+Seventh JS homework
