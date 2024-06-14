@@ -21,6 +21,41 @@ li {
 	list-style: none;
 }
 
+button {
+	color: #fff;
+	background-color: #4e75ff;
+	width: 120px;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 250ms ease-in-out;
+	&:hover,
+	&:focus {
+		background-color: #6c8cff;
+	}
+}
+
+input {
+	border: 1px solid #808080;
+	outline: none;
+	padding: 8px 72px;
+	border-radius: 8px;
+	&:hover,
+	&:focus {
+		border-color: #000;
+	}
+}
+
+[data-destroy] {
+	background-color: #ff4e4e;
+	transition: background-color 250ms ease-in-out;
+	&:hover,
+	&:focus {
+		background-color: #ff7070;
+	}
+}
+
 #categories {
 	display: flex;
 	flex-direction: column;
@@ -56,6 +91,8 @@ li {
 
 .gallery-item {
 	width: calc((100% - 2 * 24px) / 3);
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .gallery-image {
@@ -63,4 +100,29 @@ li {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+	max-width: 320px;
+	& label {
+		display: flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+#controls {
+	display: flex;
+	gap: 16px;
+	padding: 32px;
+}
+
+#boxes {
+	display: flex;
+	gap: 44px;
+	padding: 32px;
 }
