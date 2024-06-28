@@ -4,5 +4,5 @@ const nameOutput = document.getElementById("name-output");
 inputField.addEventListener("input", inputHandler);
 
 function inputHandler(event) {
-	nameOutput.innerHTML = event.currentTarget.value.trim() || "Anonymous";
+	nameOutput.textContent = event.currentTarget.value.trim() || "Anonymous";
 }

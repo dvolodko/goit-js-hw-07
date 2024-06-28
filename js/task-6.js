@@ -14,6 +14,7 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
+	amount = Number(amount);
 	destroyHandler();
 	let size = 30;
 	const boxesArray = [];
